@@ -1,0 +1,305 @@
+body{
+    /* font personalizado, esto lo aprendi haciendo un proyecto propio hace un tiempo jeje*/
+    font-family: "Bitcount Single", system-ui;
+    /* el linear gradient le pone un overlay desaturado a la imagen de carne (era muy rojo me daba cancer visual) */
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("./assets/img/bg.jpg");
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+    cursor: url("./assets/img/cursor2.png"), auto;
+}
+
+
+/*ahora con esta regla el salto de pagina sera animado, lo vi doomscrolleando en ig*/
+html, 
+body{
+    scroll-behavior: smooth;
+}
+
+#encabezado{
+    background-color: #1D1616;
+    text-align: center;
+    padding: 5px;
+
+    H1{
+        color: #EEEEEE;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5) ;
+        font-family: "Doto", sans-serif;
+        
+        -webkit-text-stroke: 1.5px #ff0000;
+        font-style: italic;
+        font-weight: 900;
+        text-shadow: 50px rgba(255, 163, 163, 0.9);
+        letter-spacing: 10px;
+    }
+
+    p{
+        font-family: "Rubik Glitch", system-ui;
+        font-weight: 400;
+        letter-spacing: 10px;
+        font-style: italic;
+        color: rgb(209, 61, 61);
+    }
+    
+}
+
+#menu-principal ul{
+    list-style: none;
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    padding: 0 ;
+}
+
+/*fondo de la barra de nav :3*/ 
+
+#menu-principal{
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("./assets/img/meat.jpg");
+    padding: 5px;
+    margin: 0;
+}
+
+#menu-principal ul li a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    background-color: #D84040;
+    border-radius: 4px;
+    padding: 6px 8px;
+}
+
+/* animacion de hover para el menu principal */
+
+#menu-principal li{
+    transform: all 0.5s ease-in-out;
+}
+
+#menu-principal li:hover{
+    transform: scale(1.1);
+    /* box shadows es lo que pone el brillo al fondo del boton :333 */
+    box-shadow: 0 0 15px rgba(255, 163, 163, 0.7);
+
+    cursor: url("./assets/img/cursor3.png"), pointer;
+}
+
+#contenido{
+    margin: 20px auto;
+    max-width: 900px;
+}
+
+.seccion{
+    background-color: #1D1616;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    h2, p{
+        color: #D84040;
+        font-style: italic;
+        text-align: center;
+        
+    }
+    
+}
+
+.tarjeta{
+    background-color: #5f4a4a;
+    border-radius: 6px;
+    text-align: center;
+    width: 250px;
+    padding: 10px;
+
+    p{
+        color: #000000;
+    }
+}
+
+
+
+
+
+.galeria{
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.espacio-imagen{
+    width: 100%;
+    height: 200px;
+    
+}
+
+#pie{
+    background-color: #1D1616;
+    text-align: center;
+    padding: 5px;
+    color: rgb(253, 247, 247);
+
+    position: relative;
+}
+
+
+/*reglas pa los botone de abajo*/
+
+
+
+/* contacto */
+
+#contacto{
+    text-align: center;
+    color: #D84040;
+    font-style: italic;
+    font-weight: bolder;
+}
+
+.input, textarea{
+    background-color: #5f4a4a;
+    color: #EEEEEE;
+}
+
+#mensaje{
+    background-color: #5f4a4a;
+    color: #EEEEEE;
+}
+
+button{
+    border-radius: 5px;
+    padding: 6px 7px;
+    background-color: #000000;
+    color: #EEEEEE;
+    font-family: "Doto", sans-serif;
+    font-size: medium;
+    transition: all 0.5s ease-in-out;
+
+}
+
+button:hover{
+    transform: scale(1.1);
+    color: #ff0000;
+    background-color: #5f4a4a;
+    font-weight: 900;
+    cursor: url("./assets/img/cursor3.png"), pointer;
+}
+
+input, textarea {
+
+    background-color: #5f4a4a;
+    color: #ffffff;
+   
+}
+
+
+/*NUEVO*/
+
+.SusieBaka {
+    position: absolute;
+    right: 20px;                 /* Separación desde el borde derecho */
+    top: 50%;                    /* Lo empuja a la mitad del contenedor */
+    transform: translateY(-50%); /* Lo alinea perfectamente al centro vertical */
+}
+
+
+.SusieBaka img {
+    width: 60px;                 /* Tamaño muy pequeño (ajusta si es necesario) */
+    height: auto;                /* Mantiene la proporción original */
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+/* ---------- VISTAS NUEVAS (productos, producto, registro, login) ---------- */
+
+/* enlaces dentro de las secciones */
+.seccion a:not(.boton-enlace){
+    color: #D84040;
+}
+
+/* link con forma de boton (mismo look que los button) */
+.boton-enlace{
+    display: inline-block;
+    border-radius: 5px;
+    padding: 6px 7px;
+    background-color: #000000;
+    color: #EEEEEE;
+    font-family: "Doto", sans-serif;
+    font-size: medium;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.boton-enlace:hover{
+    transform: scale(1.1);
+    color: #ff0000;
+    background-color: #5f4a4a;
+    font-weight: 900;
+    cursor: url("./assets/img/cursor3.png"), pointer;
+}
+
+/* imagen de la tarjeta */
+.espacio-imagen img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* boton Agregar/Guardado de la tarjeta */
+.btn-tarjeta{
+    background-color: #bfbfbf;
+    color: #240303;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.btn-tarjeta.guardado{
+    background-color: #e40f2b;
+    color: #140c01;
+}
+
+/* detalle de un producto */
+.detalle-producto{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.detalle-producto img{
+    width: 300px;
+    max-width: 100%;
+    border-radius: 6px;
+}
+
+.detalle-producto .texto{
+    max-width: 450px;
+}
+
+/* formularios (contacto, registro y login) con bootstrap */
+.formulario{
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.seccion .form-label,
+.seccion .form-check-label{
+    color: #D84040;
+    font-style: italic;
+}
+
+.seccion .form-control{
+    background-color: #5f4a4a;
+    color: #EEEEEE;
+    border-color: #000000;
+}
+
+.seccion .form-control::placeholder{
+    color: #c9b8b8;
+}
+
+.seccion .form-control:focus{
+    background-color: #5f4a4a;
+    color: #ffffff;
+    border-color: #D84040;
+    box-shadow: 0 0 0 0.2rem rgba(216, 64, 64, 0.4);
+}
